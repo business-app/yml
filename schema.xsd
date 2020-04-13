@@ -72,6 +72,7 @@
                 <xs:element ref="categoryId"/>
                 <xs:element ref="picture"/>
                 <xs:element ref="vendorCode"/>
+                <xs:element ref="sales_notes"/>
                 <xs:element ref="name"/>
                 <xs:element ref="description"/>
                 <xs:element ref="store"/>
@@ -90,9 +91,9 @@
             <xs:attribute name="city" type="xs:string"/>
             <xs:attribute name="phone" type="xs:string"/>
             <xs:attribute name="address" type="xs:string"/>
-            <xs:attribute name="lat" type="xs:double"/>
-            <xs:attribute name="lon" type="xs:double"/>
-            <xs:attribute name="amount" type="xs:float"/>
+            <xs:attribute name="lat" type="xs:string"/>
+            <xs:attribute name="lon" type="xs:string"/>
+            <xs:attribute name="amount" type="xs:string"/>
             <xs:attribute name="useForDelivery" type="xs:boolean"/>
         </xs:complexType>
     </xs:element>
@@ -114,6 +115,7 @@
     <xs:element name="name" type="xs:string"/>
     <xs:element name="description" type="xs:string"/>
     <xs:element name="picture" type="xs:string"/>
+    <xs:element name="sales_notes" type="xs:string"/>
     <xs:element name="city">
         <xs:complexType>
             <xs:simpleContent>
