@@ -77,11 +77,25 @@
                 <xs:element ref="description"/>
                 <xs:element ref="store"/>
                 <xs:element ref="param"/>
+                <xs:element ref="measureUnit"/>
+                <xs:element name="measure" type="measure" />
             </xs:choice>
             <xs:attribute name="id" type="xs:string"/>
             <xs:attribute name="group_id" type="xs:string"/>
         </xs:complexType>
     </xs:element>
+    <xs:simpleType name="measure" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="unit"/>
+            <xs:enumeration value="kg"/>
+            <xs:enumeration value="gramm"/>
+            <xs:enumeration value="lit"/>
+            <xs:enumeration value="mlit"/>
+            <xs:enumeration value="sec"/>
+            <xs:enumeration value="day"/>
+            <xs:enumeration value="hour"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:element name="store">
         <xs:complexType>
             <xs:sequence>
@@ -98,6 +112,13 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="price">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string"/>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="measureUnit">
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string"/>
